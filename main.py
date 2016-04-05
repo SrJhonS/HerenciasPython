@@ -34,15 +34,15 @@ bbdd=[
         Persona('Sara', 'Garrido', 18)
 ]
 
+while True:
+    numero = input("Introduce el numero de alumnos que va a anadir: ")
+    try:
+        numero=int(numero)
+        if numero >= 0:
+            bbdd = agregar(numero, bbdd)
+            mostrar(bbdd)
+            sys.exit()
+    except ValueError:
+        print("Introduce un numero")
 
-
-try:
-    numero = int(input("Introduce el numero de alumnos que va a anadir: "))
-except ValueError:
-    print("Introduce un numero")
-    sys.exit()
-
-
-bbdd = agregar(numero, bbdd)
-mostrar(bbdd)
 #mostrar_adultos(bbdd)
